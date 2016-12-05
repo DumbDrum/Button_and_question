@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="btn1">My Application</string>
+    <string name="btn2">My Application</string>
+    <string name="btn3">My Application</string>
+    <string name="btn4">My Application</string>
+    <string name="toast1">Правильно</string>
+    <string name="toast2">Неправильно</string>
+</resources>
