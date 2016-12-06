@@ -1,5 +1,6 @@
 package com.example.asus.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn2;
     Button btn3;
     Button btn4;
+    Button btnCheat;
     TextView tw;
     int mPos;
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
+        btnCheat = (Button) findViewById(R.id.btnCheat);
         tw = (TextView) findViewById(R.id.tw);
         tw.setText(arr[mPos].getQuestionText());
         mPos = 0;
@@ -71,6 +74,18 @@ public class MainActivity extends AppCompatActivity {
                 } else{
                     Toast.makeText(MainActivity.this,R.string.toast2,Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        btnCheat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               //Intent i = new Intent(MainActivity.this,CheatActivity.class);
+
+                boolean answerIsTrue = arr[mPos].
+                        getTrue();
+                Intent i = CheatActivity.newIntent(MainActivity.this,
+                        answerIsTrue);
+                startActivity(i);
             }
         });
     }

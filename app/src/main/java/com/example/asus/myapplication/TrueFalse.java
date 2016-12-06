@@ -21,11 +21,11 @@ public class TrueFalse {
         return isTrue;
     }
 
-    public void setQuestionText(String questionText) {
-        QuestionText = questionText;
-    }
+   // public void setQuestionText(String questionText) {
+   //     QuestionText = questionText;
+   // }
 
-    public void setTrue(Boolean aTrue) {
-        isTrue = aTrue;
-    }
+   // public void setTrue(Boolean aTrue) {
+    //    isTrue = aTrue;
+   // }
 }
